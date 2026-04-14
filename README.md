@@ -71,5 +71,4 @@ To run the site locally for development:
 
 ## 🔗 Links
 
-- **GitHub Repository:** [https://github.com/markbush/Past-and-Present](https://github.com/markbush/Past-and-Present)
-- **Live Site:** [https://markbush.github.io/Past-and-Present](https://markbush.github.io/Past-and-Present)
+- **Live Site:** [https://past-and-present.org](https://past-and-present.org)
