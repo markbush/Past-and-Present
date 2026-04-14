@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} | Past and Present</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative(page) }}">
+    <script src="{{ '/assets/js/slider-component.js' | relative(page) }}" defer></script>
+</head>
+<body>
+    <header class="container">
+        <nav>
+            <ul>
+                <li><strong><a href="{{ '/' | relative(page) }}" class="contrast">Past and Present</a></strong></li>
+            </ul>
+            <ul>
+                <li><a href="{{ '/' | relative(page) }}">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        {{ content | safe }}
+    </main>
+    <footer class="container">
+        <small>
+            Built with <a href="https://www.11ty.dev/">Eleventy</a> and <a href="https://picocss.com/">Pico.css</a>.
+        </small>
+    </footer>
+</body>
+</html>

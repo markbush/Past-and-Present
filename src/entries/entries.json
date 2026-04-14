@@ -1,0 +1,4 @@
+{
+  "layout": "layouts/entry.njk",
+  "tags": "entries"
+}

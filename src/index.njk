@@ -1,0 +1,52 @@
+---
+layout: layouts/base.njk
+title: "Home"
+---
+
+<section id="introduction">
+    <h2>Welcome to Past and Present</h2>
+    <p>
+        Exploring how our world has changed over time through historical satellite imagery. 
+        Slide to compare the past and present.
+    </p>
+</section>
+
+{% set latestEntry = collections.entries | reverse | first %}
+{% if latestEntry %}
+<section id="showcase">
+    <h3>Showcase: <a href="{{ latestEntry.url | relative(page) }}" class="outline">{{ latestEntry.data.title }}</a></h3>
+    {% set firstComp = latestEntry.data.comparisons | first %}
+    <image-comparison-slider
+        before-src="{{ firstComp.before | relative(page) }}" 
+        after-src="{{ firstComp.after | relative(page) }}" 
+        before-alt="{{ latestEntry.data.title }} {{ firstComp.beforeLabel }}" 
+        after-alt="{{ latestEntry.data.title }} {{ firstComp.afterLabel }}"
+        before-label="{{ firstComp.beforeLabel }}"
+        after-label="{{ firstComp.afterLabel }}">
+        <span slot="attribution">{{ firstComp.attribution }}</span>
+    </image-comparison-slider>
+</section>
+<hr>
+{% endif %}
+
+<div class="grid">
+    <section id="latest-additions">
+        <h3>Latest Additions</h3>
+        <ul>
+        {% for entry in collections.entries | reverse | limit(5) %}
+            <li><a href="{{ entry.url | relative(page) }}">{{ entry.data.title }}</a></li>
+        {% endfor %}
+        </ul>
+    </section>
+
+    <section id="groupings">
+        <h3>Groupings</h3>
+        <ul>
+        {% for tag, posts in collections %}
+            {% if tag != "all" and tag != "entries" %}
+                <li><a href="{{ ('/tags/' + tag + '/') | relative(page) }}">{{ tag }} ({{ posts | length }})</a></li>
+            {% endif %}
+        {% endfor %}
+        </ul>
+    </section>
+</div>

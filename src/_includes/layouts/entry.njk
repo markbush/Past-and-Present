@@ -1,0 +1,41 @@
+---
+layout: layouts/base.njk
+---
+<article>
+    <header>
+        <h1>{{ title }}</h1>
+    </header>
+
+    <div class="description">
+        {{ content | safe }}
+    </div>
+
+    <section class="comparisons">
+        {% for comp in comparisons %}
+            <div class="comparison-item">
+                <image-comparison-slider 
+                    before-src="{{ comp.before | relative(page) }}" 
+                    after-src="{{ comp.after | relative(page) }}" 
+                    before-alt="{{ comp.beforeAlt or title + ' ' + comp.beforeLabel }}" 
+                    after-alt="{{ comp.afterAlt or title + ' ' + comp.afterLabel }}"
+                    before-label="{{ comp.beforeLabel }}"
+                    after-label="{{ comp.afterLabel }}">
+                    <span slot="attribution">{{ comp.attribution }}</span>
+                </image-comparison-slider>
+            </div>
+        {% endfor %}
+    </section>
+
+    <footer>
+        <nav>
+            <ul>
+                <li><strong>Tags:</strong></li>
+                {% for tag in tags %}
+                    {% if tag != "entries" %}
+                        <li><a href="{{ ('/tags/' + tag + '/') | relative(page) }}" class="secondary">{{ tag }}</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </nav>
+    </footer>
+</article>
