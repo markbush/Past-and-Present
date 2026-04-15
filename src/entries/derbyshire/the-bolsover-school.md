@@ -1,6 +1,6 @@
 ---
 title: "The Bolsover School"
-date: 2026-04-14
+date: 2026-04-14 12:00:00
 tags: ["Schools", "Derbyshire"]
 url: "https://en.wikipedia.org/wiki/The_Bolsover_School"
 comparisons:

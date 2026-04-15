@@ -1,6 +1,6 @@
 ---
 title: "Chesterfield FC"
-date: 2026-04-15
+date: 2026-04-15 15:40:00
 tags: ["Stadiums", "Derbyshire"]
 url: "https://en.wikipedia.org/wiki/Chesterfield_F.C."
 comparisons:
