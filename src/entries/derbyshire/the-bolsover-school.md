@@ -3,8 +3,8 @@ title: "The Bolsover School"
 date: 2026-04-14
 tags: ["Schools", "Derbyshire"]
 comparisons:
-  - before: "/assets/images/The Bolsover School 1999.png"
-    after: "/assets/images/The Bolsover School 2025.png"
+  - before: "/assets/images/derbyshire/The Bolsover School 1999.png"
+    after: "/assets/images/derbyshire/The Bolsover School 2025.png"
     beforeLabel: "1999"
     afterLabel: "2025"
     attribution: "©2026 Google Earth, Data: 1999: Infoterra Ltd & Bluesky, 2025: Airbus"
