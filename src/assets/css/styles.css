@@ -14,6 +14,31 @@ main {
     flex: 1;
 }
 
+.nav-wrapper {
+    background-color: var(--pico-card-sectioning-background-color);
+    border-bottom: 1px solid var(--pico-muted-border-color);
+    margin-bottom: 2rem;
+    padding: 0.5rem 0;
+}
+
+.nav-wrapper a {
+    color: var(--pico-contrast);
+    text-decoration: none;
+}
+
+.nav-wrapper a:hover {
+    color: var(--pico-primary);
+}
+
+.nav-wrapper a[aria-current="page"] {
+    color: var(--pico-primary);
+    border-bottom: 2px solid var(--pico-primary);
+}
+
+.nav-wrapper nav {
+    margin-bottom: 0;
+}
+
 .comparison-item {
     margin: var(--comparison-spacing) 0;
     padding: 1rem;

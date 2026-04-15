@@ -7,6 +7,12 @@ module.exports = function(eleventyConfig) {
     return collectionApi.getFilteredByGlob("src/entries/*.md").sort((a, b) => b.date - a.date);
   });
 
+  eleventyConfig.addCollection("nav", function(collectionApi) {
+    return collectionApi.getFilteredByTag("nav").sort((a, b) => {
+      return (a.data.navOrder || 0) - (b.data.navOrder || 0);
+    });
+  });
+
   // Filters
   eleventyConfig.addFilter("limit", function(array, limit) {
     return array.slice(0, limit);

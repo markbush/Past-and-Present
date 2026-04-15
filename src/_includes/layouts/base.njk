@@ -4,20 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }} | Past and Present</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/images/favicon/favicon-16x16.png' | relative(page) }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/images/favicon/favicon-32x32.png' | relative(page) }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/favicon/apple-touch-icon.png' | relative(page) }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
     <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative(page) }}">
     <script src="{{ '/assets/js/slider-component.js' | relative(page) }}" defer></script>
 </head>
 <body>
-    <header class="container">
-        <nav>
-            <ul>
-                <li><strong><a href="{{ '/' | relative(page) }}" class="contrast">Past and Present</a></strong></li>
-            </ul>
-            <ul>
-                <li><a href="{{ '/' | relative(page) }}">Home</a></li>
-            </ul>
-        </nav>
+    <header class="nav-wrapper">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><strong><a href="{{ '/' | relative(page) }}">Past and Present</a></strong></li>
+                </ul>
+                <ul>
+                    {% for item in collections.nav %}
+                    <li>
+                        <a href="{{ item.url | relative(page) }}" 
+                           {% if item.url == page.url %}aria-current="page"{% endif %}>
+                            {{ item.data.title }}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </nav>
+        </div>
     </header>
     <main class="container">
         {{ content | safe }}
