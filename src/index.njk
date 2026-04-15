@@ -13,7 +13,7 @@ navOrder: 1
     </p>
 </section>
 
-{% set latestEntry = collections.entries | reverse | first %}
+{% set latestEntry = collections.entries | first %}
 {% if latestEntry %}
 <section id="showcase">
     <h3>Showcase: <a href="{{ latestEntry.url | relative(page) }}" class="outline">{{ latestEntry.data.title }}</a></h3>
@@ -35,7 +35,7 @@ navOrder: 1
     <section id="latest-additions">
         <h3>Latest Additions</h3>
         <ul>
-        {% for entry in collections.entries | reverse | limit(5) %}
+        {% for entry in collections.entries | limit(5) %}
             <li><a href="{{ entry.url | relative(page) }}">{{ entry.data.title }}</a></li>
         {% endfor %}
         </ul>

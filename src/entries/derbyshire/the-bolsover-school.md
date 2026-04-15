@@ -2,6 +2,7 @@
 title: "The Bolsover School"
 date: 2026-04-14
 tags: ["Schools", "Derbyshire"]
+url: "https://en.wikipedia.org/wiki/The_Bolsover_School"
 comparisons:
   - before: "/assets/images/derbyshire/The Bolsover School 1999.png"
     after: "/assets/images/derbyshire/The Bolsover School 2025.png"

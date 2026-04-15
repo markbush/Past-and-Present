@@ -8,6 +8,9 @@ layout: layouts/base.njk
 
     <div class="description">
         {{ content | safe }}
+        {% if url %}
+        <p><a href="{{ url }}" target="_blank">Read more...</a></p>
+        {% endif %}
     </div>
 
     <section class="comparisons">
