@@ -17,7 +17,7 @@ permalink: /tags/{{ tag }}/
 
 <ul>
 {% set taglist = collections[ tag ] %}
-{% for entry in taglist | reverse %}
+{% for entry in taglist | sort(attribute="data.title") %}
   <li><a href="{{ entry.url | relative(page) }}">{{ entry.data.title }}</a></li>
 {% endfor %}
 </ul>

@@ -44,7 +44,7 @@ navOrder: 1
     <section id="groupings">
         <h3>Tags</h3>
         <ul>
-        {% for tag, posts in collections %}
+        {% for tag, posts in collections | dictsort %}
             {% if tag != "all" and tag != "entries" and tag != "nav" %}
                 <li><a href="{{ ('/tags/' + tag + '/') | relative(page) }}">{{ tag }} ({{ posts | length }})</a></li>
             {% endif %}
