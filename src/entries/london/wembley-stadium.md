@@ -17,7 +17,7 @@ comparisons:
   - before: "/assets/images/london/Wembley Stadium 1999.png"
     after: "/assets/images/london/Wembley Stadium 2024.png"
     beforeLabel: "1999"
-    afterLabel: "2025"
+    afterLabel: "2024"
     attribution: "©2026 Google, Data: 1999: Infoterra Ltd & Bluesky, 2024: Airbus"
 ---
 
