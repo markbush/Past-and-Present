@@ -16,7 +16,7 @@ navOrder: 1
 {% set latestEntry = collections.entries | first %}
 {% if latestEntry %}
 <section id="showcase">
-    <h3>Showcase: <a href="{{ latestEntry.url | relative(page) }}" class="outline">{{ latestEntry.data.title }}</a></h3>
+    <h3>Latest: <a href="{{ latestEntry.url | relative(page) }}" class="outline">{{ latestEntry.data.title }}</a></h3>
     {% set firstComp = latestEntry.data.comparisons | first %}
     <image-comparison-slider
         before-src="{{ firstComp.before | relative(page) }}" 
