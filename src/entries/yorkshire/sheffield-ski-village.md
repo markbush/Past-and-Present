@@ -11,4 +11,4 @@ comparisons:
     attribution: "©2026 Google, Data: 1999: Infoterra Ltd & Bluesky, 2025: Airbus"
 ---
 
-Sheffield Ski Village opened in 1988.  It underwent many changes and expansions over the years and was considered one of the largest artificial ski resorts in Europe.  It was destroyed by a fire in 2012.  There have been numberous fires at the site in the following years and has become notorious for it in the city.
+Sheffield Ski Village opened in 1988.  It underwent many changes and expansions over the years and was considered one of the largest artificial ski resorts in Europe.  It was destroyed by a fire in 2012.  There have been numerous fires at the site in the following years and has become notorious for it in the city.
