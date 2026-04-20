@@ -9,7 +9,15 @@ layout: layouts/base.njk
     <div class="description">
         {{ content | safe }}
         {% if url %}
-        <p><a href="{{ url }}" target="_blank">Read more...</a></p>
+          <p><a href="{{ url }}" target="_blank">Read more...</a></p>
+        {% endif %}
+        {% if urls %}
+        <h4>Read more...</h4>
+        <p>
+          {% for urlitem in urls %}
+            <a href="{{ urlitem.url }}" target="_blank">{{ urlitem.title }}</a></br>
+          {% endfor %}
+        </p>
         {% endif %}
     </div>
 
